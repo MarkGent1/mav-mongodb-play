@@ -1,0 +1,6 @@
+services:
+  mav.mongowithddd.api:
+    image: ${DOCKER_REGISTRY-}mavmongowithdddapi
+    build:
+      context: .
+      dockerfile: src/Mav.MongoWithDdd.Api/Dockerfile

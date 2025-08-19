@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mav.MongoWithDdd.Api", "src\Mav.MongoWithDdd.Api\Mav.MongoWithDdd.Api.csproj", "{A2C6E72A-1B58-4321-AD37-20D4888D2B67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mav.MongoWithDdd.Application", "src\Mav.MongoWithDdd.Application\Mav.MongoWithDdd.Application.csproj", "{77F51829-F9CE-4164-8C50-90A72614B8C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mav.MongoWithDdd.Infrastructure", "src\Mav.MongoWithDdd.Infrastructure\Mav.MongoWithDdd.Infrastructure.csproj", "{012870D3-E3B9-4E61-A0A5-4C8468C11F3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mav.MongoWithDdd.Core", "src\Mav.MongoWithDdd.Core\Mav.MongoWithDdd.Core.csproj", "{0560F57C-6A47-4C7F-A2F4-3B41D999B1F0}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{81DDED9D-158B-E303-5F62-77A2896D2A5A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2C6E72A-1B58-4321-AD37-20D4888D2B67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2C6E72A-1B58-4321-AD37-20D4888D2B67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2C6E72A-1B58-4321-AD37-20D4888D2B67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2C6E72A-1B58-4321-AD37-20D4888D2B67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77F51829-F9CE-4164-8C50-90A72614B8C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77F51829-F9CE-4164-8C50-90A72614B8C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77F51829-F9CE-4164-8C50-90A72614B8C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77F51829-F9CE-4164-8C50-90A72614B8C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{012870D3-E3B9-4E61-A0A5-4C8468C11F3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{012870D3-E3B9-4E61-A0A5-4C8468C11F3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{012870D3-E3B9-4E61-A0A5-4C8468C11F3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{012870D3-E3B9-4E61-A0A5-4C8468C11F3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0560F57C-6A47-4C7F-A2F4-3B41D999B1F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0560F57C-6A47-4C7F-A2F4-3B41D999B1F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0560F57C-6A47-4C7F-A2F4-3B41D999B1F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0560F57C-6A47-4C7F-A2F4-3B41D999B1F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D878DD5-ACB3-4F18-B5E8-E98254DCA698}
+	EndGlobalSection
+EndGlobal
