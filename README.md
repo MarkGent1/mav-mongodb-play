@@ -40,3 +40,15 @@ CustomerCreatedEventHandler(ILogger<CustomerCreatedEventHandler> logger) : INoti
 ```
 
 We can use the `INotificationHandler` handlers to generate `IntegrationEvents` for downstream services to pick up by AWS SNS/SQS for example.
+
+### 2.2 The IAggregateRoot : IEntity
+
+The infrastructure allows for you to use domain models with or without the `IAggregateRoot` designation.
+
+The `Customer` controller and set of handlers is set up to use the `IAggregateRoot` and `ITrackedResult`.
+
+The `Site` controller is a simpler version where no `IAggregateRoot` is used.
+
+### 2.3 Request/response models and mappings
+
+I haven't included mappings and conversions between request, response and entity types here. The purpose of this repo is to highlight the DDD features rather than the basics around mapping types.

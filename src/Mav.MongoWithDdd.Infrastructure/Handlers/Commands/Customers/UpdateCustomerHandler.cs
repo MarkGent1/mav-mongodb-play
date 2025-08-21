@@ -6,7 +6,7 @@ using MediatR;
 
 namespace Mav.MongoWithDdd.Infrastructure.Handlers.Commands.Customers;
 
-public class UpdateCustomerHandler(IGenericRepository<Customer> repo) : ICommandHandler<UpdateCustomerCommand, Unit>
+public class UpdateCustomerHandler(IGenericRepository<Customer> repo) : ITrackedCommandHandler<UpdateCustomerCommand, Unit>
 {
     private readonly IGenericRepository<Customer> _repo = repo;
 

@@ -7,7 +7,7 @@ using Mav.MongoWithDdd.Infrastructure.MongoDb.Repositories;
 namespace Mav.MongoWithDdd.Infrastructure.Handlers.Commands.Customers;
 
 // Example storing as Customer domain object directly
-/*public class CreateCustomerHandler(IGenericRepository<Customer> repo) : ICommandHandler<CreateCustomerCommand, string>
+/*public class CreateCustomerHandler(IGenericRepository<Customer> repo) : ITrackedCommandHandler<CreateCustomerCommand, string>
 {
     private readonly IGenericRepository<Customer> _repo = repo;
 
@@ -22,7 +22,7 @@ namespace Mav.MongoWithDdd.Infrastructure.Handlers.Commands.Customers;
 }*/
 
 // Example storing as CustomerDocument
-public class CreateCustomerHandler(IGenericRepository<CustomerDocument> repo) : ICommandHandler<CreateCustomerCommand, string>
+public class CreateCustomerHandler(IGenericRepository<CustomerDocument> repo) : ITrackedCommandHandler<CreateCustomerCommand, string>
 {
     private readonly IGenericRepository<CustomerDocument> _repo = repo;
 
