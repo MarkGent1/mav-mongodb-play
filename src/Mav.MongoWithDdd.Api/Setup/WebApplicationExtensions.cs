@@ -48,6 +48,7 @@ public static class WebApplicationExtensions
         app.MapGet("/", () => "Alive!").WithApiVersionSet(versionSet).IsApiVersionNeutral();
 
         app.UseHttpsRedirection();
+        app.UseRouting();
         app.MapControllers();
     }
 

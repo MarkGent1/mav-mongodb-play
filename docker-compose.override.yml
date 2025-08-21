@@ -6,6 +6,7 @@ services:
       - ApplicationInsights__InstrumentationKey=12345
       - Mongo__DatabaseUri=mongodb://host.docker.internal:27017
       - Mongo__DatabaseName=mav-db
+      - Mongo__EnableTransactions=false
     ports:
       - "80"
       - "443"

@@ -1,6 +1,9 @@
 ﻿using Asp.Versioning;
+using Mav.MongoWithDdd.Application.Setup;
 using Mav.MongoWithDdd.Infrastructure.MongoDb.Setup;
+using Mav.MongoWithDdd.Infrastructure.Setup;
 using Mav.MongoWithDdd.Infrastructure.Telemetry;
+using System.Text.Json.Serialization;
 
 namespace Mav.MongoWithDdd.Api.Setup;
 
@@ -10,6 +13,12 @@ public static class ServiceRegistrations
     {
         var services = builder.Services;
         var config = builder.Configuration;
+
+        services.AddControllers()
+            .AddJsonOptions(opts => {
+                var enumConverter = new JsonStringEnumConverter();
+                opts.JsonSerializerOptions.Converters.Add(enumConverter);
+            });
 
         services.AddLogging();
 
@@ -27,14 +36,16 @@ public static class ServiceRegistrations
             options.SubstituteApiVersionInUrl = true;
         });
 
-        services.AddMongoDbDependencies(config);
+        services.AddInfrastructureLayer(config);
+
+        services.AddApplicationLayer(config);
 
         services.ConfigureHealthChecks();
     }
 
     private static void ConfigureHealthChecks(this IServiceCollection services)
     {
-        services.AddHealthChecks();
-        //    .AddCheck<MongoDbHealthCheck>("mongodb", tags: ["db", "mongo"]);
+        services.AddHealthChecks()
+            .AddCheck<MongoDbHealthCheck>("mongodb", tags: ["db", "mongo"]);
     }
 }
